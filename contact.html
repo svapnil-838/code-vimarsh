@@ -3,23 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Code-Vimarsh</title>
+    <title>Contact Us | Code-Vimarsh</title>
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="memories.html"> </head>
+    <style>
+        /* Specific styles for contact profiles */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .role-tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .social-links {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            background: var(--border-soft);
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--bg-light);
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
 <body>
+
     <header>
-        <h1>Reach Out</h1>
-        <p>Have a bug or a brilliant idea?</p>
+        <h1>Connect with Us</h1>
+        <p>Meet the team behind Code-Vimarsh</p>
     </header>
+
     <main>
         <section>
-            <form class="comment-form" style="max-width: 600px; margin: auto;">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <h2>Club Mentors & Heads</h2>
+            <div class="contact-grid">
+                
+                <article class="card">
+                    <span class="role-tag">Mentor</span>
+                    <h3>Dr. Jane Doe</h3>
+                    <p>Guiding our technical vision and research initiatives.</p>
+                    <div class="contact-info">
+                        📞 +91 98765 43210<br>
+                        📧 jane.doe@university.edu
+                    </div>
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">ResearchGate</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="role-tag">Club Coordinator</span>
+                    <h3>Svapnil</h3>
+                    <p>Lead developer and club administrator.</p>
+                    <div class="contact-info">
+                        📞 +91 12345 67890<br>
+                        📧 svapnil@codevimarsh.com
+                    </div>
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="role-tag">Technical Head</span>
+                    <h3>Alex Smith</h3>
+                    <p>In charge of hackathons and project builds.</p>
+                    <div class="contact-info">
+                        📞 +91 11223 34455<br>
+                        📧 alex.tech@codevimarsh.com
+                    </div>
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section style="margin-top: 4rem;">
+            <h2>Send a Message</h2>
+            <div class="explanation-box">
+                <form action="#" class="comment-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="4" placeholder="How can we help you?"></textarea>
+                    <button type="submit">Send Inquiry</button>
+                </form>
+            </div>
         </section>
     </main>
+
+    <footer>
+        Built by the Coding Club • 2025
+    </footer>
+
 </body>
 </html>
