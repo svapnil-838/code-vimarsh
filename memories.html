@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding Club | Memories Wall</title>
+
+  <!-- =========================
+       BASIC STYLING
+       Clean, club-style look
+       ========================= -->
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --bg-light: #020617;
+      --accent: #38bdf8;
+      --text-main: #e5e7eb;
+      --text-muted: #94a3b8;
+      --card-bg: #020617;
+      --border-soft: #1e293b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, var(--bg-dark), var(--bg-light));
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 2rem;
+      border-bottom: 1px solid var(--border-soft);
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      color: var(--accent);
+      font-size: 1.5rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.5rem;
+    }
+
+    /* =========================
+       MEMORY GRID
+       ========================= */
+    .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .memory-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .memory-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+    }
+
+    .memory-card img,
+    .memory-card iframe {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .memory-content {
+      padding: 1rem;
+    }
+
+    .memory-content h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .memory-content p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* =========================
+       EXPLANATION / STORY AREA
+       ========================= */
+    .explanation-box {
+      background: var(--card-bg);
+      border: 1px dashed var(--border-soft);
+      border-radius: 12px;
+      padding: 1.5rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* =========================
+       COMMENTS SECTION
+       ========================= */
+    .comments {
+      margin-top: 1.5rem;
+    }
+
+    .comment {
+      padding: 0.8rem;
+      border-bottom: 1px solid var(--border-soft);
+      font-size: 0.9rem;
+    }
+
+    .comment strong {
+      color: var(--accent);
+    }
+
+    .comment-form {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .comment-form input,
+    .comment-form textarea {
+      background: #020617;
+      border: 1px solid var(--border-soft);
+      color: var(--text-main);
+      padding: 0.6rem;
+      border-radius: 8px;
+    }
+
+    .comment-form button {
+      background: var(--accent);
+      color: #020617;
+      border: none;
+      padding: 0.6rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid var(--border-soft);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================
+       HEADER
+       ========================= -->
+  <header>
+    <h1>Coding Club – Memories Wall</h1>
+    <p>Moments, experiments, failures, commits, and inside jokes</p>
+  </header>
+
+  <main>
+
+    <!-- =========================
+         MEMORY SECTION
+         ========================= -->
+    <section>
+      <h2>Club Memories</h2>
+      <div class="memory-grid" id="memoryGrid">
+        <!-- Example Image Memory -->
+        <div class="memory-card">
+          <img src="https://via.placeholder.com/400x300" alt="Hackathon Day">
+          <div class="memory-content">
+            <h3>First Hackathon</h3>
+            <p>Sleep deprivation, broken builds, and the first real taste of teamwork.</p>
+          </div>
+        </div>
+
+        <!-- Example YouTube Memory -->
+        <div class="memory-card">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+          <div class="memory-content">
+            <h3>Guest Session Recording</h3>
+            <p>A session that started with algorithms and ended with life advice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         EXPLANATION / STORY AREA
+         ========================= -->
+    <section>
+      <h2>Behind the Scenes</h2>
+      <div class="explanation-box">
+        This space exists for the unstructured stuff: random thoughts, half-baked ideas,
+        technical rants, and stories that do not fit neatly into a gallery card.
+        <br><br>
+        Coding clubs are not just about clean code. They are about broken logic at 2 AM,
+        arguments over tabs vs spaces, and learning why something failed instead of pretending it worked.
+      </div>
+    </section>
+
+    <!-- =========================
+         COMMENTS SECTION
+         ========================= -->
+    <section>
+      <h2>Comments</h2>
+      <div class="comments" id="commentsContainer"></div>
+
+      <form class="comment-form" id="commentForm">
+        <input type="text" id="username" placeholder="Your name" required />
+        <textarea id="commentText" rows="3" placeholder="Drop your thoughts here" required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    Built by the Coding Club • Learning by doing
+  </footer>
+
+  <!-- =========================
+       JAVASCRIPT LOGIC
+       Written clearly, no shortcuts
+       ========================= -->
+  <script>
+    // Store comments in memory (refresh will reset them)
+    const comments = [];
+
+    const commentForm = document.getElementById("commentForm");
+    const commentsContainer = document.getElementById("commentsContainer");
+
+    // Function to render all comments
+    function renderComments() {
+      commentsContainer.innerHTML = "";
+
+      comments.forEach(function (comment) {
+        const commentElement = document.createElement("div");
+        commentElement.classList.add("comment");
+
+        commentElement.innerHTML = `<strong>${comment.name}</strong>: ${comment.text}`;
+        commentsContainer.appendChild(commentElement);
+      });
+    }
+
+    // Handle form submission
+    commentForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const nameInput = document.getElementById("username");
+      const textInput = document.getElementById("commentText");
+
+      const newComment = {
+        name: nameInput.value,
+        text: textInput.value
+      };
+
+      comments.push(newComment);
+
+      nameInput.value = "";
+      textInput.value = "";
+
+      renderComments();
+    });
+  </script>
+
+</body>
+</html>
