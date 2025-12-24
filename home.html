@@ -1,4 +1,81 @@
-here i have already created  3 files for  dif code  
-also i have initiated git in  this folder
-maybe ive to refer to my git notes 
-ok i got it 
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Code-Vimarsh</title>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="home.css" />
+		
+	</head>
+    	<body>
+		<header>
+			<div class="avatar">VS</div>
+			<div class="greeting">
+				<h1>welcome!</h1>
+				<p>Its site of code-vimarsh club dev by svapnil</p>
+			</div>
+			<div class="helper">
+				<button title="Profile" aria-label="Profile" style="background:none;border:0;cursor:pointer;font-weight:600;color:var(--muted)">Profile</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="grid" aria-label="Main options">
+				<article class="card" tabindex="0" data-key="1">
+					<div class="icon">🏠</div>
+					<h3>Home</h3>
+					<p>Return to the dashboard and overview.</p>
+				</article>
+				<article class="card" tabindex="0" data-key="2">
+					<div class="icon">🔍</div>
+					<h3>Search</h3>
+					<p>Find content across the site quickly.</p>
+				</article>
+				<article class="card" tabindex="0" data-key="3">
+					<div class="icon">📁</div>
+					<h3>Files</h3>
+					<p>Manage your files and resources.</p>
+				</article>
+				<article class="card" tabindex="0" data-key="4">
+					<div class="icon">⚙️</div>
+					<h3>Settings</h3>
+					<p>Manage configuration and preferences.</p>
+				</article>
+				<article class="card" tabindex="0" data-key="5">
+					<div class="icon">📊</div>
+					<h3>Reports</h3>
+					<p>View your reports and analytics.</p>
+				</article>
+				<article class="card" tabindex="0" data-key="6">
+					<div class="icon">🗂️</div>
+					<h3>Projects</h3>
+					<p>Open and create new projects.</p>
+				</article>
+				<article class="card" tabindex="0" data-key="7">
+					<div class="icon">💬</div>
+					<h3>Messages</h3>
+					<p>Open your conversations and notifications.</p>
+				</article>
+				<article class="card" tabindex="0" data-key="8">
+					<div class="icon">🎯</div>
+					<h3>Goals</h3>
+					<p>Track goals and milestones.</p>
+				</article>
+			</section>
+		</main>
+
+		<div class="bottombar" role="navigation" aria-label="Bottom navigation">
+			<nav>
+				<button class="active" data-action="home">🏠 Home</button>
+				<button data-action="search">🔍 Search</button>
+				<button data-action="profile">👤 Profile</button>
+			</nav>
+			<div style="display:flex;gap:8px;color:var(--muted);font-weight:600">v1.0</div>
+		</div>
+
+		<div class="toast" id="toast">Action</div>
+
+		<script src="home.js"></script>
+	</body>
+</html>
